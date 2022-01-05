@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+:root{
+    --max-width: 1020px;
+}
+
+html{
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body{
+    background: #DDF2FF;
+    margin: 20px;
+    height: 100%;
+}
+
+main{
+    background: #fff;
+    border-radius: 16px;  
+    width: 100%;
+    height: 100%;
+}
+
+.logo{
+    width: 186.25px;
+    height: 50px;
+}
+
+.header .header-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 16px 9px;
+}
+
+.header nav ul{
+    display: flex;
+}
+
+
+.header ul li a{
+    margin: 10px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 27px;
+    color: #414141;
+    border-radius: 80px;
+    padding: 10px 20px;
+    transition: 0.4s;
+}
+
+.header ul li a:hover{
+    color: #fff;
+    background: linear-gradient(135deg, #67b6ff, #006fec, #3f00bc);
+}
+
+.header .menu{
+    display: none;
+    width: 60px;
+    height: 60px;
+}
+
+.header .hamburguer{
+    background-color: #414141;
+    position: absolute;
+    display: block;
+    width: 32px;
+    height: 2px;
+    top:52px;
+    right: 65px;
+    transition: 0.5s ease-in-out;
+}
+
+.header .hamburguer:before,
+.header .hamburguer:after{
+    background-color: #414141;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 0.2s ease-in-out;
+}
+
+.header .hamburguer:before{
+    top:-10px;
+}
+
+.header .hamburguer:after{
+    bottom: -10px;
+}
+
+.header input{
+    display: none;
+}
+
+.header input:checked ~ label .hamburguer{
+    transform: rotate(45deg);
+}
+
+.header input:checked ~ label .hamburguer:before{
+    transform: rotate(90deg);
+    top:0
+}
+
+.header input:checked ~ label .hamburguer:after{
+    transform: rotate(90deg);
+    bottom:0
+}
+
+@media (max-width: 900px){
+
+    .header .menu{
+        display: block;
+    }
+    
+    .header nav ul{
+        display: block;
+        width: 215px;
+    }
+
+    .header ul li{
+        display: none;
+        width: 100px;
+    }
+
+    .header input:checked ~ ul li{
+        display: block;
+    }
+
+    .header nav{
+        position: absolute;
+        top:8px;
+        right: 0;
+        z-index: 1;
+    }
+
+    .header nav ul{
+        background-color: #fff;
+        margin-right: 29px;
+    }
+
+    .header nav ul a{
+        width: 140px;
+        display: block;
+        text-align: center;
+    }
+
+    .logo{
+        width: 88px;
+        height: 50px;
+    }
+}
+
+.principal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner img{
+    width: 100%;
+    height: 475px;
+}
+
+.information h1{
+    font-weight: 600;
+    font-size: 5rem;
+    line-height: 80px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    color: #414141;;
+}
+
+.information p{
+    font-weight: 400;
+    font-size: 2.1rem;
+    text-align: justify;
+    color: rgba(65, 65, 65, 0.5);
+    margin-left: 100px;
+    line-height: 36px;
+}
+
+.btn{
+    text-align: center;
+    margin-left: 100px;
+    width: 280px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    background: #221AC0;
+    color: #fff;
+    font-size: 1.5rem;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background: #485DE8;
+}
+
+@media (max-width: 500px){
+
+    .principal{
+        display: block;
+        width: 100%;
+    }
+
+    .information h1 {
+        font-size: 2.8rem;
+        line-height: 30px;
+        margin: 40px;
+}
+
+    .information p{
+        font-size: 1.4rem;
+        line-height: 20px;
+        margin: 40px;
+    }
+
+    .btn{
+        margin: 30px;
+        width: 160px;
+    }
+
+    .banner img{
+        width: 100%;
+        height: 35vh;
+    }
+}
